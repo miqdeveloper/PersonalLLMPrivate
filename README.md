@@ -16,8 +16,6 @@ mas ja gera textos.
 
 # EN-US
 
-# PersonalLLMPrivate
-
   is a web interface built with Django, a high-level Python framework that encourages fast, clean development with pragmatic design. This application uses the Ollama API, which is an application programming interface for interacting with the LLM Mistral:7b-instruct-v0.2-q8_0 model.
 
 The LLM Mistral:7b-instruct-v0.2-q8_0 model is a state-of-the-art language model that is capable of generating coherent and informative texts. It can be used for a variety of tasks, including generating detailed descriptions, creative writing, and even code generation.
