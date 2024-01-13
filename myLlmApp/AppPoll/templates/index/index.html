@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+
+  <head>
+    <title>LLM PRIVATE CHAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'index/home.css' %}" />
+  </head>
+
+  <body>
+    <div class="Boximput">
+
+      <form action="#" method="post">
+        {% csrf_token %}
+
+        <input class="FormImput" type="text" name="prompt" /><br/>
+
+        <h2>Modelos Disponiveis</h2>
+
+        <input id="radio1" class="" type="radio" name="model" value="wizard-vicuna-uncensored:13b-q4_K_S"  /> <label for="radio1">wizard-vicuna-uncensored:13b-q4_K_S</label> <br />
+        <input id="radio2" class="" type="radio" name="model" value="llama2-uncensored:7b-chat-q4_K_M"  /> <label for="radio2">llama2-uncensored:7b-chat-q4_K_M</label> <br />
+        <input id="radio3" class="" type="radio" name="model" value="deepseek-coder:6.7b-instruct-q5_1" /><label for="radio3">deepseek-coder:6.7b-instruct-q5_1</label><br />
+        <input id="radio4" class="" type="radio" name="model" value="mistral:7b-instruct-v0.2-q5_1"  /><label for="radio4">mistral:7b-instruct-v0.2-q5_1</label><br />
+        <input id="radio5" class="" type="radio" name="model" value="mistral:v0.2" /><label for="radio5" >mistral:v0.2</label><br />
+        <input id="radio6" class="" type="radio" name="model" value="mistral:7b-instruct-v0.2-q8_0" checked /><label for="radio6" >mistral:7b-instruct-v0.2-q8_0</label><br /> 
+
+        <input class="BtnImput" type="submit" value="Enviar" />
+      </form>
+    </div>
+
+    <div class="BoxResponseApi">
+      <textarea disabled rows="30" cols="100" style="resize: none;">{{ prt|safe }}</textarea>
+    </div>
+  </body>
+</html>
